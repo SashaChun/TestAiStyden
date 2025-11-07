@@ -1,0 +1,84 @@
+.card {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-gray-200);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-6);
+  width: var(--stat-card-width);
+  height: var(--stat-card-height);
+  display: flex;
+  align-items: center;
+  transition: box-shadow var(--transition-fast);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: var(--spacing-4);
+}
+
+.textContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-6);
+  flex: 1;
+}
+
+.label {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-gray-600);
+  line-height: var(--line-height-tight);
+  margin: 0;
+}
+
+.value {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-gray-900);
+  line-height: var(--line-height-tight);
+  margin: 0;
+}
+
+.iconWrapper {
+  width: var(--icon-size-lg);
+  height: var(--icon-size-lg);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Icon color variants - from Figma */
+.green {
+  background-color: var(--color-green-100);
+  color: var(--color-green-600);
+}
+
+.blue {
+  background-color: var(--color-blue-100);
+  color: var(--color-blue-600);
+}
+
+.orange {
+  background-color: var(--color-orange-100);
+  color: var(--color-orange-600);
+}
+
+.purple {
+  background-color: var(--color-purple-100);
+  color: var(--color-purple-600);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .card {
+    width: 100%;
+  }
+}

@@ -1,0 +1,122 @@
+.page {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-6);
+}
+
+.header {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-gray-200);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-6);
+}
+
+.stats {
+  display: flex;
+  gap: var(--spacing-8);
+  align-items: center;
+}
+
+.statItem {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+
+.statLabel {
+  font-size: var(--font-size-base);
+  color: var(--color-gray-600);
+}
+
+.statValue {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-gray-900);
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+.searchInput {
+  width: 100%;
+  padding: var(--spacing-3) var(--spacing-4);
+  border: 1px solid var(--color-gray-300);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-base);
+  transition: border-color var(--transition-fast);
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: var(--color-blue-500);
+}
+
+.filters {
+  display: flex;
+  gap: var(--spacing-2);
+  flex-wrap: wrap;
+}
+
+.filterBtn {
+  padding: var(--spacing-2) var(--spacing-4);
+  background-color: var(--color-gray-100);
+  color: var(--color-gray-700);
+  border: 1px solid var(--color-gray-200);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.filterBtn:hover {
+  background-color: var(--color-gray-200);
+  border-color: var(--color-gray-300);
+}
+
+.filterBtn.active {
+  background-color: var(--color-blue-600);
+  color: var(--color-white);
+  border-color: var(--color-blue-600);
+}
+
+.messagesList {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-gray-200);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  min-height: 400px;
+}
+
+.empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  color: var(--color-gray-500);
+  font-size: var(--font-size-lg);
+  text-align: center;
+  padding: var(--spacing-8);
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .stats {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-4);
+  }
+
+  .filters {
+    flex-direction: column;
+  }
+
+  .filterBtn {
+    width: 100%;
+  }
+}

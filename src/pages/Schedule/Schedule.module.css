@@ -1,0 +1,124 @@
+.page {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-6);
+}
+
+.weekNav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.weekTitle {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-gray-900);
+  margin: 0;
+}
+
+.daysTabs {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: var(--spacing-2);
+  background-color: var(--color-white);
+  padding: var(--spacing-4);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-gray-200);
+}
+
+.dayTab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-2);
+  padding: var(--spacing-4);
+  background-color: transparent;
+  border: 1px solid var(--color-gray-200);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.dayTab:hover {
+  background-color: var(--color-gray-50);
+  border-color: var(--color-gray-300);
+}
+
+.dayTab.active {
+  background-color: var(--color-blue-50);
+  border-color: var(--color-blue-500);
+}
+
+.dayTab.today {
+  border-color: var(--color-green-500);
+}
+
+.dayTab.active.today {
+  background-color: var(--color-blue-50);
+  border-color: var(--color-blue-500);
+}
+
+.dayName {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-gray-700);
+}
+
+.dayTab.active .dayName {
+  color: var(--color-blue-600);
+  font-weight: var(--font-weight-semibold);
+}
+
+.dayDate {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-gray-900);
+}
+
+.content {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-gray-200);
+  border-radius: var(--radius-md);
+  min-height: 400px;
+}
+
+.scheduleList {
+  display: flex;
+  flex-direction: column;
+}
+
+.dateTitle {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-gray-900);
+  padding: var(--spacing-6);
+  border-bottom: 1px solid var(--color-gray-200);
+  margin: 0;
+}
+
+.empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  color: var(--color-gray-500);
+  font-size: var(--font-size-lg);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .daysTabs {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .dayName {
+    font-size: var(--font-size-xs);
+  }
+
+  .dayDate {
+    font-size: var(--font-size-base);
+  }
+}

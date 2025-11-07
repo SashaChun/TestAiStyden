@@ -1,0 +1,21 @@
+.container {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.svg {
+  transform: rotate(0deg);
+}
+
+.progress {
+  transition: stroke-dashoffset var(--transition-slow);
+}
+
+.value {
+  position: absolute;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-gray-900);
+  line-height: 1;
+}
